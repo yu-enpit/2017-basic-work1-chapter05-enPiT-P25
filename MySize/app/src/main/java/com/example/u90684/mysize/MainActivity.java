@@ -37,6 +37,11 @@ public class MainActivity extends AppCompatActivity {
         editWaist = (EditText) findViewById(R.id.waist);
         editInseam = (EditText) findViewById(R.id.inseam);
 
+        editNeck.setText(neck);
+        editSleeve.setText(sleeve);
+        editWaist.setText(waist);
+        editInseam.setText(inseam);
+
         findViewById(R.id.height_button)
                 .setOnClickListener(new View.OnClickListener(){
                     @Override
@@ -56,6 +61,6 @@ public class MainActivity extends AppCompatActivity {
         editor.putString(SLEEVE,editSleeve.getText().toString());
         editor.putString(WAIST,editWaist.getText().toString());
         editor.putString(INSEAM,editInseam.getText().toString());
-
+        editor.commit();
     }
 }
